@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  font-size: .725rem;
+  text-transform: uppercase;
+  letter-spacing: .075rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+ul {
+  padding: 0;
+  display: inline;
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.social {
+  padding: .5em;
+  background-color: #000;
+}
+
+.social ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  padding: .5em 1em;
+}
+
+header {
+  padding: 2em 0;
+}
+
+header .navbar-nav {
+  margin: 0 auto;
+}
+
+header .nav-link {
+  color: #000;
+  font-weight: 700;
+}
+
+header .nav-link:hover {
+  color: #4FD675;
+}
+
+header input {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header .form-control {
+  border-radius: 16px;
+  text-align: center;
+}
+
+header .active {
+  color: #4FD675;
+}
+
+.featured {
+  background-color: #000;
+  position: relative;
+  color: #fff;
+}
+
+.featured img {
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .45;
+}
+
+.featured .featured-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.featured .featured-content .featured-menu {
+  color: #4FD675;
+}
+
+.featured .featured-content .featured-status {
+  font-size: .75rem;
+}
+
+.featured .featured-content .featured-status i {
+  margin: 0 .5em;
+}
+
+.popular .row {
+  --bs-gutter-x: .2rem;
+  --bs-gutter-y: .1rem;
+}
+
+.popular img {
+  opacity: .45;
+  -webkit-transition: -webkit-transform 750ms;
+  transition: -webkit-transform 750ms;
+  transition: transform 750ms;
+  transition: transform 750ms, -webkit-transform 750ms;
+}
+
+.popular img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.popular .popular-content-top {
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular .popular-content-top img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 450px;
+}
+
+.popular .popular-content-bottom {
+  background-color: #000;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular .popular-content-bottom img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  height: 300px;
+}
+
+.popular .popular-content-text {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+}
+
+.popular .popular-content-text .popular-content-info {
+  font-size: .725rem;
+}
+
+.popular .popular-content-date {
+  font-size: .755rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 1em;
+  left: -1em;
+  border-radius: 16px;
+  padding: .5em 2em;
+  font-weight: 700;
+  display: none;
+}
+
+.popular .popular-content-button {
+  color: #e92e2e;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: none;
+}
+
+.popular .popular-content-button i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.popular .popular-content-button i:hover {
+  -webkit-animation: breathe infinite linear 1s;
+          animation: breathe infinite linear 1s;
+}
+
+.popular .popular-content-info {
+  letter-spacing: .2em;
+}
+
+.popular .popular-content-info i {
+  margin-left: 0.5em;
+}
+
+.popular-content:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b5d975), color-stop(#3aae81), color-stop(#007c83), color-stop(#004869), to(#051937));
+  background-image: linear-gradient(to right, #b5d975, #3aae81, #007c83, #004869, #051937);
+}
+
+.popular-content:hover .popular-content-button {
+  display: block;
+}
+
+.popular-content:hover .popular-content-date {
+  display: block;
+}
+
+@-webkit-keyframes breathe {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes breathe {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.meals {
+  background-color: #FCF9F5;
+}
+
+.meals-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+}
+
+.meals-grid .meals-items img {
+  border-radius: 50%;
+  width: 100%;
+  display: block;
+  padding: .8em;
+}
+
+.meals-grid .meals-items .meals-text {
+  font-size: .75rem;
+}
+
+.about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-me img {
+  width: 100%;
+  display: block;
+}
+
+.about-me .profile-picture {
+  border: 2px dotted #4FD675;
+  border-radius: 50%;
+  padding: .2em;
+  width: 70%;
+  display: block;
+}
+
+.about-me p {
+  font-size: .875rem;
+  text-align: center;
+}
+
+.about-me ul li a {
+  color: #000;
+  font-size: 1.125rem;
+  padding: .2em;
+}
+
+.about-me button {
+  background-color: #4FD675;
+  border-radius: 16px;
+  color: #fff;
+  font-size: .875rem;
+  padding: .5em 1.5em;
+}
+
+.about-me button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.about-me .vegan-recepies {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.about-me .vegan-recepies-title,
+.about-me .featured-recepies-title {
+  font-weight: 600;
+  letter-spacing: .125em;
+  border: 1px solid #4FD675;
+  width: 100%;
+  padding: .8em 0;
+}
+
+.about-me .vegan-recepies-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.about-me .vegan-recepies-item img {
+  border-radius: 50%;
+  width: 30%;
+  margin-right: 1em;
+}
+
+.about-me .vegan-recepies-item .vegan-recepies-info {
+  text-align: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  justify-self: flex-start;
+}
+
+.about-me .vegan-recepies-item .items-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about-me .newsletter {
+  border: 2px solid #F7F7F7;
+  border-top: 4px solid #4FD675;
+  padding: 1em;
+}
+
+.about-me .newsletter h6 {
+  font-size: 1.5rem;
+}
+
+.about-me .newsletter .subscribe-button {
+  border-radius: 0;
+  border: 0;
+  margin: .5em;
+}
+
+.about-me .newsletter form input {
+  padding: .8em;
+  border: 0;
+  background-color: #F7F7F7;
+}
+
+.about-me .featured-recepies {
+  margin: 1em 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.about-me .recepie-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F7F7F7;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.about-me .recepie-item .recepie-number {
+  margin-right: 1em;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4FD675;
+  width: 10%;
+}
+
+.about-me .recepie-item .recepie-info p {
+  text-align: left;
+}
+
+.about-me .recepie-item .recepie-info .featured-recepie-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.about-me .item1 {
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+.about-me .item1:hover {
+  background-image: block;
+  background-image: url(https://tinysalt.loftocean.com/wp-content/uploads/2020/03/monika-grabkowska-dGxSJzhgW0o-unsplash-600x864.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.about-me .item2 {
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+.about-me .item2:hover {
+  background-image: url(https://tinysalt.loftocean.com/wp-content/uploads/2020/03/food-photographer-jennifer-pallian-sSnCZlEWN5E-unsplash-600x750.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.about-me .item3 {
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+.about-me .item3:hover {
+  background-image: url(https://tinysalt.loftocean.com/wp-content/uploads/2020/03/food-photographer-jennifer-pallian-6S27S6pZ6o0-unsplash-600x900.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.card {
+  border: none;
+  overflow: hidden;
+}
+
+.card .card-body {
+  padding: 1em 0;
+}
+
+.card .card-body a {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #4FD675;
+  padding: .5em 0;
+}
+
+.card .card-img {
+  overflow: hidden;
+}
+
+.card img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.card img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card .card-subtitle {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.card .card-subtitle i {
+  margin: 1em 0;
+  margin-left: 1em;
+}
+
+.card .accent-text {
+  color: #4FD675;
+}
+
+.card .latest-content-date {
+  font-size: .755rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 1em;
+  left: -1em;
+  border-radius: 16px;
+  padding: .5em 2em;
+  font-weight: 700;
+  display: none;
+}
+
+.card .latest-content-button {
+  color: #e92e2e;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: none;
+}
+
+.card .latest-content-button i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.card .latest-content-button i:hover {
+  -webkit-animation: breathe infinite linear 1s;
+          animation: breathe infinite linear 1s;
+}
+
+.card:hover .latest-content-button {
+  display: block;
+}
+
+.card:hover .latest-content-date {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .meals-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .meals-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

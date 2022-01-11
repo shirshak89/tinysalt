@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+$heading-font-family: 'Playfair Display', serif;
+$accent-color: #4FD675;
+$b: #000;
+$w: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+    font-size: .725rem;
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: $heading-font-family;
+}
+
+.container {
+    max-width: 1400px;
+}
+
+ul {
+    padding: 0;
+    display: inline;
+    li {
+        display: inline;
+        list-style: none;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+// Social
+
+.social {
+    padding: .5em;
+    background-color: $b;
+    ul {
+        li {
+            a {
+                color: rgba($color: #fff, $alpha: .8);
+                padding: .5em 1em;
+            }
+        }
+    }
+}
+
+// Header
+
+header {
+    padding: 2em 0;
+    .navbar-nav {
+        margin: 0 auto;
+    }
+    .nav-link {
+        color: $b;
+        font-weight: 700;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    input {
+        color: rgba($color: #fff, $alpha: .5);
+    }
+    .form-control {
+        border-radius: 16px;
+        text-align: center;
+    }
+    .active {
+        color: $accent-color;
+    }
+}
+
+// Featured
+
+.featured {
+    background-color: #000;
+    position: relative;
+    color: $w;
+    img {
+        height: 600px;
+        object-fit: cover;
+        opacity: .45;
+    }
+    .featured-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .featured-menu {
+            color: $accent-color;
+        }
+        .featured-status {
+            font-size: .75rem;
+            i {
+                margin: 0 .5em;
+            }
+        }
+    }
+}
+
+// Most Popular
+
+.popular {
+    .row {
+        --bs-gutter-x: .2rem;
+        --bs-gutter-y: .1rem;
+    }
+    img {
+        opacity: .45;
+        transition: transform 750ms;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .popular-content-top {
+        width: 100%;
+        background-color: $b;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 450px;
+        }
+    }
+    .popular-content-bottom {
+        background-color: $b;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            height: 300px;
+        }
+    }
+    .popular-content-text {
+        color: $w;
+        position: absolute;
+        bottom: 0;
+        left: 1em;
+        .popular-content-info {
+            font-size: .725rem;
+        }
+    }
+    .popular-content-date {
+        font-size: .755rem;
+        color: $w;
+        background-color: rgba($color: $b, $alpha: .8);
+        position: absolute;
+        top: 1em;
+        left: -1em;
+        border-radius: 16px;
+        padding: .5em 2em;
+        font-weight: 700;
+        display: none;
+    }
+    .popular-content-button {
+        color: #e92e2e;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        display: none;
+        i {
+            background-color: white;
+            border-radius: 50%;
+            padding: 1em;
+            &:hover {
+                animation: breathe infinite linear 1s;
+            }
+        }
+    }
+    .popular-content-info {
+        letter-spacing: .2em;
+        i {
+            margin-left: 0.5em;
+        }
+    }
+}
+
+.popular-content:hover{
+    background-image: linear-gradient(to right, #b5d975, #3aae81, #007c83, #004869, #051937);
+}
+
+.popular-content:hover .popular-content-button {
+    display: block;
+}
+
+.popular-content:hover .popular-content-date  {
+    display: block;
+}
+
+@keyframes breathe {
+    from {transform: scale(1.2);}
+    to {transform: scale(1);}
+}
+
+// Meals
+
+.meals {
+    background-color: #FCF9F5;
+}
+
+.meals-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    .meals-items {
+        img {
+            border-radius: 50%;
+            width: 100%;
+            display: block;
+            padding: .8em;
+        }
+        .meals-text {
+            font-size: .75rem;
+        }
+    }
+
+}
+
+// Latest Recepies
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100%;       
+        display: block;
+    }
+    .profile-picture {
+        border: 2px dotted $accent-color;
+        border-radius: 50%;
+        padding: .2em;
+        width: 70%;
+        display: block;
+    }
+    p {
+        font-size: .875rem;
+        text-align: center;
+    }
+    ul {
+        li {
+            a {
+                color: $b;
+                font-size: 1.125rem;
+                padding: .2em;
+            }
+        }
+    }
+    button {
+        background-color: $accent-color;
+        border-radius: 16px;
+        color: $w;
+        font-size: .875rem;
+        padding: .5em 1.5em;
+        &:hover {
+            background-color: $b;
+            color: $w;
+        }
+    }
+    .vegan-recepies {
+        align-self: stretch;
+    }
+    .vegan-recepies-title,
+    .featured-recepies-title {
+        font-weight: 600;
+        letter-spacing: .125em;
+        border: 1px solid $accent-color;
+        width: 100%;
+        padding: .8em 0;
+    }
+    .vegan-recepies-item {
+        display: flex;
+        margin-bottom: 1em;
+        img {
+            border-radius: 50%;
+            width: 30%;
+            margin-right: 1em;
+        }
+        .vegan-recepies-info {
+            text-align: left;
+            align-self: center;
+            justify-self: flex-start;
+        }
+        .items-title {
+            font-family: $heading-font-family;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    .newsletter {
+        border: 2px solid #F7F7F7;
+        border-top: 4px solid $accent-color;
+        padding: 1em;
+        h6 {
+            font-size: 1.5rem;
+        }
+        .subscribe-button {
+            border-radius: 0;
+            border: 0;
+            margin: .5em;
+        }
+        form {
+            input {
+                padding: .8em;
+                border: 0;
+                background-color: #F7F7F7;
+            }
+        }
+    }
+
+    .featured-recepies {
+        margin: 1em 0;
+        align-self: stretch;
+    }
+
+    .recepie-item {
+        display: flex;
+        justify-content: center;
+        background-color: #F7F7F7;
+        justify-content: flex-start;
+        padding: 1.5em;
+        margin-bottom: 1em;
+        .recepie-number {
+            margin-right: 1em;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: $accent-color;
+            width: 10%;
+        }
+        .recepie-info {
+            p {
+                text-align: left;
+            }
+            .featured-recepie-title {
+                font-family: $heading-font-family;
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .item1 {
+        transition: 1000ms;
+        &:hover {
+            background-image: block;
+            background-image: url(https://tinysalt.loftocean.com/wp-content/uploads/2020/03/monika-grabkowska-dGxSJzhgW0o-unsplash-600x864.jpg);
+            background-size: cover;
+            background-position: center;
+            color: $w;
+            text-shadow: 2px 2px $b;;
+        }
+    }
+    
+    .item2 {
+        transition: 1000ms;
+        &:hover {
+            background-image: url(https://tinysalt.loftocean.com/wp-content/uploads/2020/03/food-photographer-jennifer-pallian-sSnCZlEWN5E-unsplash-600x750.jpg);
+            background-size: cover;
+            background-position: center;
+            color: $w;
+            text-shadow: 2px 2px $b;;
+        }
+    }
+    
+    .item3 {
+        transition: 1000ms;
+        &:hover {
+            background-image: url(https://tinysalt.loftocean.com/wp-content/uploads/2020/03/food-photographer-jennifer-pallian-6S27S6pZ6o0-unsplash-600x900.jpg);
+            background-size: cover;
+            background-position: center;
+            color: $w;
+            text-shadow: 2px 2px $b;;
+        }
+    }
+    
+}
+
+.card {
+    border: none;
+    overflow: hidden;
+    .card-body {
+        padding: 1em 0;
+        a {
+            text-decoration: none;
+            color: $b;
+            border-bottom: 1px solid $accent-color;
+            padding: .5em 0;
+        }
+    }
+    .card-img {
+        overflow: hidden;
+    }
+    img {
+        height: 500px;
+        object-fit: cover;
+        transition: transform 500ms;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .card-subtitle {
+        font-size: .75rem;
+        font-weight: 600;
+        letter-spacing: .1em;
+        i {
+            margin: 1em 0;
+            margin-left: 1em;
+        }
+    }
+    .accent-text {
+        color: $accent-color;
+    }
+    .latest-content-date {
+        font-size: .755rem;
+        color: $w;
+        background-color: rgba($color: $b, $alpha: .8);
+        position: absolute;
+        top: 1em;
+        left: -1em;
+        border-radius: 16px;
+        padding: .5em 2em;
+        font-weight: 700;
+        display: none;
+    }
+    .latest-content-button {
+        color: #e92e2e;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        display: none;
+        i {
+            background-color: white;
+            border-radius: 50%;
+            padding: 1em;
+            &:hover {
+                animation: breathe infinite linear 1s;
+            }
+        }
+    }
+}
+
+.card:hover .latest-content-button {
+    display: block;
+}
+
+.card:hover .latest-content-date {
+    display: block;
+}
+
+// Media Queries
+
+@media (max-width: 760px) {
+    .meals-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .meals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h2 {
+        font-size: 4rem;
+    }
+}

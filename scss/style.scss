@@ -492,6 +492,82 @@ header {
     display: block;
 }
 
+hr {
+    margin: 0;
+}
+
+// Never Miss
+
+.never-miss {
+    h3 {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    form {
+        position: relative;
+        max-width: 30em;
+        margin: 0 auto;
+        input {
+            border-radius: 20px;
+            padding: .65em 1em;
+            border: none;
+            background-color: #F7F7F7;
+            font-size: .875rem;
+            position: relative;
+            width: 100%;
+        }
+        button {
+            border-radius: 20px;
+            padding: .65em 1em;
+            background-color: $accent-color;
+            border: none;
+            font-size: .875rem;
+            position: absolute;
+            right: 0;
+            color: $w;
+            font-weight: 600;
+            letter-spacing: .1em;
+        }
+    }
+    .terms-and-condn {
+        margin-top: 1em;
+    }
+}
+
+// Follow-Me
+
+.follow-me {
+    position: relative;
+    .follow-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .img-grid {
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        display: block;
+        transition: transform 500ms;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .follow-me-text-div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $w;
+        border-radius: 50%;
+        opacity: .9;
+        height: 130px;
+        width: 130px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 // Media Queries
 
 @media (max-width: 760px) {

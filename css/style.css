@@ -80,6 +80,7 @@ header input {
 header .form-control {
   border-radius: 16px;
   text-align: center;
+  font-size: .8rem;
 }
 
 header .active {
@@ -471,6 +472,7 @@ header .active {
 }
 
 .card {
+  margin-top: 1em;
   border: none;
   overflow: hidden;
 }
@@ -555,6 +557,21 @@ header .active {
 .card .latest-content-button i:hover {
   -webkit-animation: breathe infinite linear 1s;
           animation: breathe infinite linear 1s;
+}
+
+.load-more {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: .5em 1.25em;
+  max-width: 200px;
+  margin-top: 2em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: .875rem;
+  letter-spacing: .1rem;
 }
 
 .card:hover .latest-content-button {
